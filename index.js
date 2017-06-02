@@ -30,7 +30,9 @@ const reverse = function (packageJson, options) {
         getPackages(config.devDependencies);
     }
 
-    return `npm install --save ${packages.join(' ')}`;
+    const installationScript = `npm install --save ${packages.join(' ')}`;
+    console.log(installationScript);
+    return installationScript;
 };
 
 module.exports = { reverse };
