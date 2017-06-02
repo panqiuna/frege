@@ -28,7 +28,7 @@ frege [options]
 frege
 ```
 不带任何参数直接运行 frege 命令将生成当前目录下 package.json 文件中 dependencies 和 devDependencis(如果有的话) 全部 npm 包的安装脚本, 例如:
-```text
+```npm
 npm i -S debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0.0"
 npm i -D ava@">=0.19.1 <0.20.0" chai@">=4.0.1 <5.0.0" eslint@">=3.19.0 <4.0.0" tap-nyan@">=1.1.0 <2.0.0"
 ```
@@ -39,7 +39,7 @@ npm i -D ava@">=0.19.1 <0.20.0" chai@">=4.0.1 <5.0.0" eslint@">=3.19.0 <4.0.0" t
 frege --productionOnly
 ```
 的缩写, 仅生成 `dependencis` 下面 npm 包的安装脚本.
-```text
+```npm
 npm i -S debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0.0"
 ```
 
@@ -49,7 +49,7 @@ npm i -S debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0
 frege --devOnly
 ```
 的缩写, 仅生成 `devDependencis` 项下面 npm 包的安装脚本.
-```text
+```npm
 npm i -D ava@">=0.19.1 <0.20.0" chai@">=4.0.1 <5.0.0" eslint@">=3.19.0 <4.0.0" tap-nyan@">=1.1.0 <2.0.0"
 ```
 
@@ -59,7 +59,7 @@ npm i -D ava@">=0.19.1 <0.20.0" chai@">=4.0.1 <5.0.0" eslint@">=3.19.0 <4.0.0" t
 frege --latest
 ```
 的简写, 安装 npm 包的最新版本, 而不是原有 package.json 中指定的版本范围.
-```text
+```npm
 npm i -S debug optionator semver
 npm i -D ava chai eslint tap-nyan
 ```
