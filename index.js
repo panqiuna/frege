@@ -13,26 +13,48 @@ const reverse = function (packageJson, options) {
     if (!options) {
         options = {};
     }
-    const packages = [];
+    const scripts = [];
     const getPackages = dependencies => {
+        const packages = [];
         debug(inspect(dependencies, false, null));
         for (const item of Object.keys(dependencies)) {
-            const packageWithVersion = options.latest ? `${item}@latest` : `${item}@"${semver.Range(dependencies[item]).range}"`;
+            const packageWithVersion = options.latest ? `${item}` : `${item}@"${semver.Range(dependencies[item]).range}"`;
             packages.push(packageWithVersion);
         }
+        return packages;
     };
 
-    if (config.dependencies && !options.devOnly) {
-        getPackages(config.dependencies);
+    // if (options.productionOnly || !options.devOnly) {
+    //     if (config.dependencies) {
+    //         scripts.push(`npm i -S ${getPackages(config.dependencies).join(' ')}`);
+    //     }
+    // }
+    //
+    // if (options.devOnly && !options.productionOnly) {
+    //     if (config.devDependencies) {
+    //         scripts.push(`npm i -D ${getPackages(config.devDependencies).join(' ')}`);
+    //     }
+    // }
+
+    if (options.productionOnly) {
+        if (config.dependencies) {
+            scripts.push(`npm i -S ${getPackages(config.dependencies).join(' ')}`);
+        }
+    } else if (options.devOnly) {
+        if (config.devDependencies) {
+            scripts.push(`npm i -D ${getPackages(config.devDependencies).join(' ')}`);
+        }
+    } else {
+        if (config.dependencies) {
+            scripts.push(`npm i -S ${getPackages(config.dependencies).join(' ')}`);
+        }
+        if (config.devDependencies) {
+            scripts.push(`npm i -D ${getPackages(config.devDependencies).join(' ')}`);
+        }
     }
 
-    if (config.devDependencies && !options.productionOnly) {
-        getPackages(config.devDependencies);
-    }
-
-    const installationScript = `npm install --save ${packages.join(' ')}`;
-    console.log(installationScript);
-    return installationScript;
+    console.log(scripts.join('\r\n'));
+    return scripts;
 };
 
 module.exports = { reverse };
