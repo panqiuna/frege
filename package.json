@@ -1,0 +1,24 @@
+{
+  "name": "frege",
+  "version": "0.0.1",
+  "description": "Reverse a package.json file to npm install command",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/princetoad/Frege.git"
+  },
+  "author": "fanshenggang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/princetoad/Frege/issues"
+  },
+  "homepage": "https://github.com/princetoad/Frege#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "chai": "^4.0.1",
+    "eslint": "^3.19.0"
+  }
+}
