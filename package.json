@@ -1,6 +1,6 @@
 {
   "name": "frege",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Reverse a package.json file to npm install script",
   "bin": {
     "frege": "./bin/frege.js"
