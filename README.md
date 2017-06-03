@@ -8,7 +8,7 @@ Reverse a package.json file to `npm install` script.
 [![npm version](https://badge.fury.io/js/frege.svg)](http://badge.fury.io/js/frege)
 [![Dependency Status](https://david-dm.org/princetoad/frege.svg?theme=shields.io)](https://david-dm.org/princetoad/frege)
 [![devDependency Status](https://david-dm.org/princetoad/frege/dev-status.svg?theme=shields.io)](https://david-dm.org/princetoad/frege#info=devDependencies)
-[![Coverage Status](https://coveralls.io/repos/princetoad/frege/badge.svg?branch=master)](https://coveralls.io/r/princetoad/frege?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/princetoad/Frege/badge.svg?branch=master)](https://coveralls.io/github/princetoad/Frege?branch=master)
 [![Inline docs](http://inch-ci.org/github/princetoad/frege.svg?branch=master)](http://inch-ci.org/github/princetoad/frege)
 
 ## Install
