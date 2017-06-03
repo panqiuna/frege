@@ -1,6 +1,16 @@
 # frege
 Reverse a package.json file to `npm install` script.
 
+[![NPM](https://nodei.co/npm/frege.png)](https://nodei.co/npm/frege/)
+
+[![Build Status](https://travis-ci.org/princetoad/frege.svg?branch=master&style=flat)](https://travis-ci.org/princetoad/frege)
+[![Build status](https://ci.appveyor.com/api/projects/status/22mjbk59kvd55m9y/branch/master)](https://ci.appveyor.com/project/princetoad/frege/branch/master)
+[![npm version](https://badge.fury.io/js/frege.svg)](http://badge.fury.io/js/frege)
+[![Dependency Status](https://david-dm.org/princetoad/frege.svg?theme=shields.io)](https://david-dm.org/princetoad/frege)
+[![devDependency Status](https://david-dm.org/princetoad/frege/dev-status.svg?theme=shields.io)](https://david-dm.org/princetoad/frege#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/princetoad/frege/badge.svg?branch=master)](https://coveralls.io/r/princetoad/frege?branch=master)
+[![Inline docs](http://inch-ci.org/github/princetoad/frege.svg?branch=master)](http://inch-ci.org/github/princetoad/frege)
+
 ## Install
 ```npm
 npm install frege -g
