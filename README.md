@@ -1,5 +1,5 @@
 # frege
-Reverse a package.json file to `npm install` script.
+Reverse package.json file to `npm install` or `yarn add` script.
 
 [![NPM](https://nodei.co/npm/frege.png)](https://nodei.co/npm/frege/)
 
@@ -15,6 +15,10 @@ Reverse a package.json file to `npm install` script.
 ```npm
 npm install frege -g
 ```
+or
+```npm
+yarn global add frege
+```
 
 ## Usage
 ### Parameter instruction
@@ -26,6 +30,7 @@ Basic configuration:
   -l, --latest          Install latest version of the npm package - default: false
   -p, --productionOnly  Only generate packages under dependencies - default: false
   -d, --devOnly         Generate install command form packages under devDenpendencies only - default: false
+  -y, --yarnInstall     Generate yarn installation script instead of npm - default: false
   -h, --help            Show help
   -v, --version         Output the version number
 ```
@@ -49,6 +54,16 @@ frege --productionOnly
 Only generate installation scripts for `dependencis`.
 ```text
 npm i -S debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0.0"
+```
+
+### frege -p -y
+is the shorthand of
+```text
+frege --productionOnly --yarnInstall
+```
+Only generate installation scripts for `dependencis` use yarn.
+```text
+yarn add debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0.0"
 ```
 
 ### frege -d

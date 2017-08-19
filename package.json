@@ -1,7 +1,7 @@
 {
   "name": "frege",
-  "version": "0.1.0",
-  "description": "Reverse a package.json file to npm install script",
+  "version": "0.2.0",
+  "description": "Reverse package.json file to installation script",
   "bin": {
     "frege": "./bin/frege.js"
   },
@@ -12,18 +12,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/princetoad/Frege.git"
+    "url": "git+https://github.com/princetoad/frege.git"
   },
   "author": "fanshenggang <tom@tfan.org>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/princetoad/Frege/issues"
+    "url": "https://github.com/princetoad/frege/issues"
   },
-  "homepage": "https://github.com/princetoad/Frege#readme",
+  "homepage": "https://github.com/princetoad/frege#readme",
   "devDependencies": {
     "ava": "^0.19.1",
     "chai": "^4.0.1",
-    "eslint": "^3.19.0",
+    "eslint": "^4.5.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
