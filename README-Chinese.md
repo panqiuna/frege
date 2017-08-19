@@ -1,11 +1,15 @@
 # frege 是什么?
-frege 可以从一个现有的 `package.json` 逆向生成安装所需的 `npm install` 脚本.
+frege 可以从一个现有的 `package.json` 逆向生成安装所需的 `npm install` 或者 `yarn add` 脚本.
 
 ## 安装
 建议把 frege 安装到全局, 然后就可以在命令下直接使用了.
 
 ```npm
 npm install frege -g
+```
+或者
+```npm
+yarn global add frege
 ```
 
 ## 使用
@@ -18,6 +22,7 @@ frege [options]
   -l, --latest          不管 package.json 中 npm 包的具体版本号, 安装该包的最新版本 - default: false
   -p, --productionOnly  仅生成 dependencies 项目下 npm 包的安装脚本. - default: false
   -d, --devOnly         仅生成 devDependencies 项目下的 npm 包的安装脚本, 即开发使用的. - default: false
+  -y, --yarnInstall     生成使用 yarn 的安装脚本. - default: false
   -h, --help            Show help
   -v, --version         Output the version number
 ```
@@ -41,6 +46,16 @@ frege --productionOnly
 的缩写, 仅生成 `dependencis` 下面 npm 包的安装脚本.
 ```npm
 npm i -S debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0.0"
+```
+
+### frege -p -y
+是
+```text
+frege --productionOnly --yarnInstall
+```
+的缩写, 仅生成 `dependencis` 下面 npm 包的安装脚本, 但是使用 yarn.
+```npm
+yarn add debug@">=2.6.8 <3.0.0" optionator@">=0.8.2 <0.9.0" semver@">=5.3.0 <6.0.0"
 ```
 
 ### frege -d
