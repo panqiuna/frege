@@ -1,6 +1,6 @@
 {
   "name": "frege",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Reverse package.json file to installation script",
   "bin": {
     "frege": "./bin/frege.js"
@@ -32,6 +32,7 @@
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
+    "chalk": "^2.1.0",
     "debug": "^2.6.8",
     "optionator": "^0.8.2",
     "semver": "^5.3.0"

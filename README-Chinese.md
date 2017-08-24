@@ -23,6 +23,7 @@ frege [options]
   -p, --productionOnly  仅生成 dependencies 项目下 npm 包的安装脚本. - default: false
   -d, --devOnly         仅生成 devDependencies 项目下的 npm 包的安装脚本, 即开发使用的. - default: false
   -y, --yarnInstall     生成使用 yarn 的安装脚本. - default: false
+  -u, --update					通常跟 -l 一起使用, 生成最新的依赖包安装脚本, 并运行. 结果就是把 package.json 和 node_moduels 下面的依赖都更新到最新版本
   -h, --help            Show help
   -v, --version         Output the version number
 ```
@@ -74,6 +75,17 @@ npm i -D ava@">=0.19.1 <0.20.0" chai@">=4.0.1 <5.0.0" eslint@">=3.19.0 <4.0.0" t
 frege --latest
 ```
 的简写, 安装 npm 包的最新版本, 而不是原有 package.json 中指定的版本范围.
+```npm
+npm i -S debug optionator semver
+npm i -D ava chai eslint tap-nyan
+```
+
+### frege -l -u
+是
+```text
+frege --latest --update
+```
+的简写, 安装 npm 依赖包的最新版本, 同时运行该脚本将 package.json 文件和 node_moduels 下面的依赖包都更新至最新版本.
 ```npm
 npm i -S debug optionator semver
 npm i -D ava chai eslint tap-nyan
