@@ -31,6 +31,7 @@ Basic configuration:
   -p, --productionOnly  Only generate packages under dependencies - default: false
   -d, --devOnly         Generate install command form packages under devDenpendencies only - default: false
   -y, --yarnInstall     Generate yarn installation script instead of npm - default: false
+  -u, --update					Update all dependencies to latest version, package.json updated at the same time. Should be used with -l option 
   -h, --help            Show help
   -v, --version         Output the version number
 ```
@@ -82,6 +83,17 @@ is the shorthand of
 frege --latest
 ```
 Inspite of version specified in packages.json, will generate scripts to install the latest version of each package.
+```text
+npm i -S debug optionator semver
+npm i -D ava chai eslint tap-nyan
+```
+
+### frege -l -u
+is the shorthand of
+```text
+frege --latest --update
+```
+Generate the latest version of installation script, then run that to update package.json file and dependencies.
 ```text
 npm i -S debug optionator semver
 npm i -D ava chai eslint tap-nyan
