@@ -1,5 +1,7 @@
-const inspect = require('util').inspect
+const {inspect} = require('util')
+const exec = require('child_process').exec
 const semver = require('semver')
+const chalk = require('chalk')
 const debug = require('debug')('frege')
 
 /**
@@ -44,8 +46,27 @@ const reverse = function (packageJson, options) {
     }
   }
 
-  console.log(scripts.join('\r\n'))
-  return scripts
+  console.log(chalk.inverse(scripts.join('\r\n')))
+
+  // update package.json?
+  if (options.update) {
+    console.log('update package.json ...')
+    exec(scripts.join('\r\n'), (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`)
+        return scripts
+      }
+      console.log(chalk.cyan(stdout))
+      console.log(chalk.yellow(stderr))
+      return scripts
+    })
+  } else {
+    return scripts
+  }
 }
 
-module.exports = {reverse}
+const update = function (scripts) {
+
+}
+
+module.exports = {reverse, update}
