@@ -50,16 +50,40 @@ const reverse = function (packageJson, options) {
 
   // update package.json?
   if (options.update) {
+    const execPromise = script => {
+      console.log(`exec "${script}" ...`)
+      return new Promise((resolve, reject) => {
+        exec(script, (error, stdout, stderr) => {
+          if (error) {
+            return reject(error)
+          }
+          console.log(chalk.cyan(stdout))
+          console.log(chalk.yellow(stderr))
+          return resolve({stdout, stderr})
+        })
+      })
+    }
+
     console.log('update package.json ...')
-    exec(scripts.join('\r\n'), (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`)
-        return scripts
-      }
-      console.log(chalk.cyan(stdout))
-      console.log(chalk.yellow(stderr))
-      return scripts
-    })
+    if (scripts.length === 1) {
+      execPromise(scripts[0])
+        .then(({stdout, stderr}) => {
+          console.log('package updated!')
+        })
+        .catch(error => {
+          console.error(`exec error: ${error}`)
+        })
+    } else {
+      execPromise(scripts[0])
+        .then(({stdout, stderr}) => (execPromise(scripts[1])))
+        .then(({stdout, stderr}) => {
+          console.log('package updated!')
+        })
+        .catch(error => {
+          console.error(`exec error: ${error}`)
+        })
+    }
+    // return scripts
   } else {
     return scripts
   }
