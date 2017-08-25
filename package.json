@@ -1,7 +1,7 @@
 {
   "name": "frege",
   "version": "0.3.1",
-  "description": "Update your package.json to lastest version",
+  "description": "Update your package.json to latest version",
   "bin": {
     "frege": "./bin/frege.js"
   },
