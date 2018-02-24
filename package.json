@@ -1,7 +1,7 @@
 {
   "name": "frege",
-  "version": "0.3.1",
-  "description": "Update your package.json to latest version",
+  "version": "0.3.2",
+  "description": "Generate npm/yarn install scripts from package.json",
   "bin": {
     "frege": "./bin/frege.js"
   },
@@ -21,20 +21,20 @@
   },
   "homepage": "https://github.com/princetoad/frege#readme",
   "devDependencies": {
-    "ava": "^0.22.0",
+    "ava": "^0.25.0",
     "chai": "^4.1.1",
-    "eslint": "^4.5.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "tap-nyan": "^1.1.0"
   },
   "dependencies": {
-    "chalk": "^2.1.0",
-    "debug": "^3.0.1",
+    "chalk": "^2.3.1",
+    "debug": "^3.1.0",
     "optionator": "^0.8.2",
-    "semver": "^5.4.1"
+    "semver": "^5.5.0"
   }
 }
