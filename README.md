@@ -84,8 +84,8 @@ frege --latest
 ```
 Inspite of version specified in packages.json, will generate scripts to install the latest version of each package.
 ```text
-npm i -S debug optionator semver
-npm i -D ava chai eslint tap-nyan
+npm i -S debug@latest optionator@latest semver@latest
+npm i -D ava@latest chai@latest eslint@latest tap-nyan@latest
 ```
 
 ### frege -l -u
@@ -95,8 +95,8 @@ frege --latest --update
 ```
 Generate the latest version of installation script, then run that to update package.json file and dependencies.
 ```text
-npm i -S debug optionator semver
-npm i -D ava chai eslint tap-nyan
+npm i -S debug@latest optionator@latest semver@latest
+npm i -D ava@latest chai@latest eslint@latest tap-nyan@latest
 ```
 
 ### frege -f ../augustine/package.json

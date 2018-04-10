@@ -20,7 +20,7 @@ const reverse = function (packageJson, options) {
     const packages = []
     debug(inspect(dependencies, false, null))
     for (const item of Object.keys(dependencies)) {
-      const packageWithVersion = options.latest ? `${item}` : `${item}@"${semver.Range(dependencies[item]).range}"`
+      const packageWithVersion = options.latest ? `${item}@latest` : `${item}@"${semver.Range(dependencies[item]).range}"`
       packages.push(packageWithVersion)
     }
     return packages

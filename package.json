@@ -1,6 +1,6 @@
 {
   "name": "frege",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Generate npm/yarn install scripts from package.json",
   "bin": {
     "frege": "./bin/frege.js"
