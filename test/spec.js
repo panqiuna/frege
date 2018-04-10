@@ -9,8 +9,8 @@ const testFile = resolve(__dirname, './material/package.json')
 test('Reverse package.json for npm', t => {
   const dependenciesScript = 'npm i -S console-polyfill@">=0.2.3 <0.3.0" echarts@">=3.6.0 <4.0.0"'
   const devDependenciesScript = 'npm i -D @ava/babel-preset-stage-4@">=1.0.0 <2.0.0" autoprefixer@">=6.7.7 <7.0.0"'
-  const dependenciesScriptLatest = 'npm i -S console-polyfill echarts'
-  const devDependenciesScriptLatest = 'npm i -D @ava/babel-preset-stage-4 autoprefixer'
+  const dependenciesScriptLatest = 'npm i -S console-polyfill@latest echarts@latest'
+  const devDependenciesScriptLatest = 'npm i -D @ava/babel-preset-stage-4@latest autoprefixer@latest'
 
   try {
     // productionOnly: false, latest: false
@@ -96,8 +96,8 @@ test('Reverse package.json for npm', t => {
 test('Reverse package.json for yarn', t => {
   const dependenciesScript = 'yarn add console-polyfill@">=0.2.3 <0.3.0" echarts@">=3.6.0 <4.0.0"'
   const devDependenciesScript = 'yarn add --dev @ava/babel-preset-stage-4@">=1.0.0 <2.0.0" autoprefixer@">=6.7.7 <7.0.0"'
-  const dependenciesScriptLatest = 'yarn add console-polyfill echarts'
-  const devDependenciesScriptLatest = 'yarn add --dev @ava/babel-preset-stage-4 autoprefixer'
+  const dependenciesScriptLatest = 'yarn add console-polyfill@latest echarts@latest'
+  const devDependenciesScriptLatest = 'yarn add --dev @ava/babel-preset-stage-4@latest autoprefixer@latest'
 
   try {
     // productionOnly: false, latest: false

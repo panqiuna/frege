@@ -76,8 +76,8 @@ frege --latest
 ```
 的简写, 安装 npm 包的最新版本, 而不是原有 package.json 中指定的版本范围.
 ```npm
-npm i -S debug optionator semver
-npm i -D ava chai eslint tap-nyan
+npm i -S debug@latest optionator@latest semver@latest
+npm i -D ava@latest chai@latest eslint@latest tap-nyan@latest
 ```
 
 ### frege -l -u
@@ -87,8 +87,8 @@ frege --latest --update
 ```
 的简写, 安装 npm 依赖包的最新版本, 同时运行该脚本将 package.json 文件和 node_moduels 下面的依赖包都更新至最新版本.
 ```npm
-npm i -S debug optionator semver
-npm i -D ava chai eslint tap-nyan
+npm i -S debug@latest optionator@latest semver@latest
+npm i -D ava@latest chai@latest eslint@latest tap-nyan@latest
 ```
 
 ### frege -f ../augustine/package.json
